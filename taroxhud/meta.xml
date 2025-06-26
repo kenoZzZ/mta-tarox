@@ -1,0 +1,59 @@
+<meta>
+    <info author="kenoZ" type="script" name="Tarox Custom HUD" version="1.0.0" description="Benutzerdefiniertes HUD für den Tarox Gamemode"/>
+    <min_mta_version client="1.5.8-9.20997" server="1.5.8-9.20997"/>
+
+    <script src="taroxhud_client.lua" type="client" cache="false"/>
+
+    <script src="taroxhud_nameclient.lua" type="client" cache="false"/>
+	
+	<script src="kill_system_server.lua" type="server" />
+	<file src="files/font.ttf" />
+
+    <file src="images/health.png" />
+    <file src="images/armor.png" />
+    <file src="images/money.png" />
+    <file src="images/playtime.png" />
+	<file src="images/wanted.png" />
+    <file src="images/weapons/weapon_0.png" />
+    <file src="images/weapons/weapon_1.png" />
+    <file src="images/weapons/weapon_2.png" />
+    <file src="images/weapons/weapon_3.png" />
+    <file src="images/weapons/weapon_4.png" />
+    <file src="images/weapons/weapon_5.png" />
+    <file src="images/weapons/weapon_6.png" />
+    <file src="images/weapons/weapon_7.png" />
+    <file src="images/weapons/weapon_8.png" />
+    <file src="images/weapons/weapon_9.png" />
+    <file src="images/weapons/weapon_10.png" />
+    <file src="images/weapons/weapon_11.png" />
+    <file src="images/weapons/weapon_12.png" />
+    <file src="images/weapons/weapon_13.png" />
+    <file src="images/weapons/weapon_14.png" />
+    <file src="images/weapons/weapon_15.png" />
+    <file src="images/weapons/weapon_16.png" />
+    <file src="images/weapons/weapon_17.png" />
+    <file src="images/weapons/weapon_18.png" />
+    <file src="images/weapons/weapon_22.png" />
+    <file src="images/weapons/weapon_23.png" />
+    <file src="images/weapons/weapon_24.png" />
+    <file src="images/weapons/weapon_25.png" />
+    <file src="images/weapons/weapon_26.png" />
+    <file src="images/weapons/weapon_27.png" />
+    <file src="images/weapons/weapon_28.png" />
+    <file src="images/weapons/weapon_29.png" />
+    <file src="images/weapons/weapon_30.png" />
+    <file src="images/weapons/weapon_31.png" />
+    <file src="images/weapons/weapon_32.png" />
+    <file src="images/weapons/weapon_33.png" />
+    <file src="images/weapons/weapon_34.png" />
+    <file src="images/weapons/weapon_35.png" />
+    <file src="images/weapons/weapon_36.png" />
+    <file src="images/weapons/weapon_37.png" />
+    <file src="images/weapons/weapon_38.png" />
+    <file src="images/weapons/weapon_39.png" />
+    <file src="images/weapons/weapon_40.png" />
+    <file src="images/weapons/weapon_41.png" />
+    <file src="images/weapons/weapon_42.png" />
+    <file src="images/weapons/weapon_43.png" />
+    <file src="images/weapons/weapon_46.png" />
+    </meta>

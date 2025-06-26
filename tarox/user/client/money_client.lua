@@ -1,0 +1,23 @@
+-----------------------------------------------
+-- money_client.lua
+-- Client-Skript für das Geld-System.
+-- (Momentan keine spezifische Logik hier,
+--  Anzeige erfolgt meist über HUD oder GUIs wie Userpanel)
+-----------------------------------------------
+
+-- Hier könnte Code für ein Geld-HUD hinkommen, falls gewünscht.
+-- Beispiel:
+-- local playerMoney = 0
+-- addEventHandler("onClientElementDataChange", localPlayer, function(dataName)
+--     if dataName == "money" then -- Annahme: Geld wird per ElementData synchronisiert
+--         playerMoney = getElementData(localPlayer, "money") or 0
+--     end
+-- end)
+--
+-- addEventHandler("onClientRender", root, function()
+--    if isLoggedIn() then -- Eigene Funktion nötig, um Login-Status zu prüfen
+--       dxDrawText("$"..playerMoney, screenW - 150, 10, screenW-10, 40, tocolor(0,255,0), 1.2, "default-bold", "right", "center")
+--    end
+-- end)
+
+--outputDebugString("[Money] Geld-System (Client) geladen (keine aktive Logik).")

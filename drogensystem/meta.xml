@@ -1,0 +1,22 @@
+<meta>
+    <info author="kenoZ" type="script" name="Drogensystem Neu" version="1.0.0" description="Neues System zum Anbauen und Ernten von Drogen"/>
+
+    <script src="drogen_server_new.lua" type="server"/>
+    <script src="drogen_client_new.lua" type="client" cache="false"/>
+
+    <event name="drogensystem:startPlantingAnimation" allowRemoteTrigger="true" />
+    <event name="drogensystem:onClientFinishedPlanting" allowRemoteTrigger="true" />
+
+    <event name="drogensystem:harvestPlant" allowRemoteTrigger="true" />
+    <event name="drogensystem:requestSellGUIData" allowRemoteTrigger="true" />
+    <event name="drogensystem:sellDrugItem" allowRemoteTrigger="true" />
+    <event name="drogensystem:openSellGUI" allowRemoteTrigger="true" />
+	<event name="drogensystem:refreshSellGUIData" allowRemoteTrigger="false" /> 
+    <event name="drogensystem:openSeedBuyGUI" allowRemoteTrigger="true" />
+    <event name="drogensystem:buySeeds" allowRemoteTrigger="true" />
+    <event name="drogensystem:refreshSeedBuyGUI" allowRemoteTrigger="true" />
+	<event name="drogensystem:clientClosedBuyGUI" allowRemoteTrigger="true" />
+
+	<file src="images/cannabis_icon.png" />
+	<file src="images/cocain_icon.png" />
+</meta>

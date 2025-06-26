@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<meta>
+    <info author="kenoZ" type="script" name="Tarox Main System" description="Main resource managing all sub-resources"/>
+    <min_mta_version server="1.6.0-9.21765" client="1.6.0-9.21765" />
+    <scoreboard enabled="false" />
+
+    <include resource="datenbank" />
+    <include resource="tarox_chat" />
+    <include resource="taroxhud" />
+	<include resource="drogensystem" />
+
+    <map src="jail/taroxjail.map" dimension="0"/>
+
+    <script src="test_server.lua" type="server"/>
+
+    <script src="user/server/register_server.lua" type="server" />
+    <script src="user/server/login_server.lua" type="server" />
+    <script src="user/server/money_server.lua" type="server" />
+    <script src="user/server/position_server.lua" type="server" />
+    <script src="user/server/deathspawn_server.lua" type="server" />
+    <script src="user/server/userpanel_server.lua" type="server" />
+    <script src="user/server/inventory_server.lua" type="server" />
+    <script src="user/server/wanteds_server.lua" type="server" />
+    <script src="user/server/id_server.lua" type="server" />
+
+    <script src="fraktionen/fractions_server.lua" type="server"/>
+    <script src="fraktionen/management_server.lua" type="server"/>
+    <script src="fraktionen/police/police_server.lua" type="server" />
+    <script src="fraktionen/medic/medic_server.lua" type="server"/>
+    <script src="fraktionen/mechanic/mechanic_server.lua" type="server" />
+    <script src="fraktionen/mechanic/repair_server.lua" type="server" />
+	<script src="fraktionen/mechanic/cartune_server.lua" type="server" />
+    <script src="fraktionen/yakuza/yakuza_server.lua" type="server"/>
+    <script src="fraktionen/mocro/mocro_server.lua" type="server" />
+    <script src="fraktionen/cosa/cosa_server.lua" type="server" />
+
+    <script src="bankrob/bankrob_server.lua" type="server" />
+    <script src="casinorob/casinorob_server.lua" type="server" />
+
+    <script src="shops/zip/zip_server.lua" type="server" />
+    <script src="shops/juwelier/juwelier_server.lua" type="server" />
+
+    <script src="vehicles/vehicles_server.lua" type="server" />
+    <script src="vehicles/vehicle_stats_server.lua" type="server" />
+
+    <script src="peds/peds_server.lua" type="server" />
+    <script src="peds/bankpeds_server.lua" type="server" />
+
+    <script src="jail/tarox_jail_server.lua" type="server"/>
+
+    <script src="taroxscoreboard/dxscoreboardserver.lua" type="server"/>
+    <script src="taroxscoreboard/dxscoreboard_playtime.lua" type="server"/>
+
+    <script src="drivelicense/drive_server.lua" type="server" />
+
+    <script src="handy/handy_server.lua" type="server"/>
+    <script src="handy/message_server.lua" type="server"/>
+
+    <script src="click/click_client.lua" type="client" />
+
+    <script src="user/client/login_register_client.lua" type="client" />
+    <script src="user/client/deathspawn_client.lua" type="client" />
+    <script src="user/client/userpanel_client.lua" type="client" />
+    <script src="user/client/wanteds_client.lua" type="client" />
+    <script src="user/client/money_client.lua" type="client" />
+    <script src="user/client/position_client.lua" type="client" />
+    <script src="user/client/inventory_client.lua" type="client" cache="false" />
+    <script src="user/client/id_client.lua" type="client" cache="false"/>
+
+    <script src="fraktionen/management_client.lua" type="client"/>
+    <script src="fraktionen/police/police_client.lua" type="client" />
+    <script src="fraktionen/medic/medic_client.lua" type="client" cache="false"/>
+    <script src="fraktionen/mechanic/mechanic_client.lua" type="client" cache="false" />
+    <script src="fraktionen/mechanic/repair_client.lua" type="client" cache="false"/>
+	<script src="fraktionen/mechanic/cartune_client.lua" type="client" />
+    <script src="fraktionen/yakuza/yakuza_client.lua" type="client"/>
+    <script src="fraktionen/mocro/mocro_client.lua" type="client" />
+    <script src="fraktionen/cosa/cosa_client.lua" type="client" />
+
+    <script src="bankrob/bankrob_client.lua" type="client" cache="false"/>
+    <script src="casinorob/casinorob_client.lua" type="client" cache="false"/>
+
+    <script src="shops/zip/zip_client.lua" type="client" />
+    <script src="shops/juwelier/juwelier_client.lua" type="client" cache="false" />
+
+    <script src="vehicles/vehicles_client.lua" type="client" />
+    <script src="vehicles/tacho_client.lua" type="client" cache="false" />
+
+    <script src="peds/bankpeds_client.lua" type="client" cache="false"/>
+    <script src="peds/peds_nametags_client.lua" type="client" cache="false"/>
+
+    <script src="jail/tarox_jail_client.lua" type="client"/>
+
+    <script src="taroxscoreboard/dxscoreboardclient.lua" type="client"/>
+    
+    <script src="drivelicense/drive_client.lua" type="client" cache="false"/>
+    
+    <script src="handy/handy_client.lua" type="client" cache="false"/>
+    <script src="handy/message_client.lua" type="client" cache="false"/>
+	
+	<script src="bank/bank_client.lua" type="client" cache="false"/>
+	<script src="bank/blips_client.lua" type="client" cache="false"/>
+    <script src="bank/bank_server.lua" type="server"/>
+	
+    <script src="jobs/muellabfuhr/muellabfuhr_server.lua" type="server" />
+    <script src="jobs/muellabfuhr/muellabfuhr_client.lua" type="client" cache="false" />
+    <script src="jobs/lkw/lkw_server.lua" type="server" />
+    <script src="jobs/lkw/lkw_client.lua" type="client" cache="false" />
+
+    <event name="jobs:showJobSelectionGUI" allowRemoteTrigger="true" />
+    <event name="jobs:playerSelectedJob" allowRemoteTrigger="true" />
+
+    <event name="jobs:muellfahrer:confirmStart" allowRemoteTrigger="true" />
+    <event name="jobs:muellfahrer:startJobConfirmed" allowRemoteTrigger="true" />
+    <event name="jobs:muellfahrer:updateCheckpoint" allowRemoteTrigger="true" />
+    <event name="jobs:muellfahrer:checkpointReached" allowRemoteTrigger="true" />
+    <event name="jobs:muellfahrer:jobCancelled" allowRemoteTrigger="true" />
+
+    <event name="jobs:lkwfahrer:interactionWithStartPed" allowRemoteTrigger="true" />
+    <event name="jobs:lkwfahrer:confirmTourStart" allowRemoteTrigger="true" />
+    <event name="jobs:lkwfahrer:startTourConfirmed" allowRemoteTrigger="true" />
+    <event name="jobs:lkwfahrer:updateDeliveryMarker" allowRemoteTrigger="true" />
+    <event name="jobs:lkwfahrer:trailerDelivered" allowRemoteTrigger="true" />
+    <event name="jobs:lkwfahrer:jobCancelled" allowRemoteTrigger="true" />
+    <event name="jobs:lkwfahrer:trailerReachedDeliveryPoint" allowRemoteTrigger="true" />
+    
+    <event name="onClientRequestsPedAction" allowRemoteTrigger="false" />
+    <event name="onDatabaseResult" allowRemoteTrigger="false"/>
+
+    <event name="bank:requestOpenGUI_Client" allowRemoteTrigger="false" />
+	<event name="bank:requestBalance" allowRemoteTrigger="true" />
+    <event name="bank:updateBalance" allowRemoteTrigger="false" />
+    <event name="bank:depositMoney" allowRemoteTrigger="true" />
+    <event name="bank:withdrawMoney" allowRemoteTrigger="true" />
+    <event name="bank:transactionFeedback" allowRemoteTrigger="false" />
+	
+
+    <event name="requestScoreboardRefresh" allowRemoteTrigger="true" />
+    
+    <event name="onPlayerUseHandyItem" allowRemoteTrigger="true" />
+    <event name="toggleHandyGUI" allowRemoteTrigger="true" />
+    <event name="requestUserPanelDataFromHandy" allowRemoteTrigger="true" />
+    <event name="messageSystem:openGUI" allowRemoteTrigger="true" />
+    <event name="messageSystem:closeGUI" allowRemoteTrigger="true" />
+    <event name="messageSystem:sendMessageToServer" allowRemoteTrigger="true" />
+    <event name="messageSystem:receiveMessageFromServer" allowRemoteTrigger="true" />
+
+    <event name="openMedicWindow" allowRemoteTrigger="true" />
+    <event name="onMedicRequestSpawn" allowRemoteTrigger="true" />
+    <event name="onMedicRequestLeave" allowRemoteTrigger="true" />
+    <event name="medic:playerDownNotificationClient" allowRemoteTrigger="true" />
+    <event name="medic:playerRevived" allowRemoteTrigger="true" />
+    <event name="medic:startReviveTimerClient" allowRemoteTrigger="true" />
+    <event name="medic:stopReviveTimerClient" allowRemoteTrigger="true" />
+    <event name="medic:playerCaseClosedClient" allowRemoteTrigger="true" />
+    <event name="showWaitForMedicScreenClient" allowRemoteTrigger="true" />
+    <event name="medic:requestLowHealthPlayers" allowRemoteTrigger="true" />
+    <event name="medic:receiveLowHealthPlayers" allowRemoteTrigger="false" />
+    <event name="medic:requestPlayerLocate" allowRemoteTrigger="true" />
+    <event name="medic:showPatientBlip" allowRemoteTrigger="false" />
+
+    <event name="drivelicense:pedInteraction" allowRemoteTrigger="true" />
+    <event name="drivelicense:openMenu" allowRemoteTrigger="true" />
+    <event name="drivelicense:showTheoryQuestion" allowRemoteTrigger="true" />
+    <event name="drivelicense:submitTheoryAnswer" allowRemoteTrigger="true" />
+    <event name="drivelicense:theoryTestFinished" allowRemoteTrigger="true" />
+    <event name="drivelicense:confirmStartPractical" allowRemoteTrigger="true" />
+    <event name="drivelicense:startLicenseProcess" allowRemoteTrigger="true" /> 
+    <event name="drivelicense:startPracticalTest" allowRemoteTrigger="true" />
+    <event name="drivelicense:startPracticalTestClient" allowRemoteTrigger="true" />
+    <event name="drivelicense:finishPracticalTest" allowRemoteTrigger="true" />
+    <event name="drivelicense:practicalTestFinishedClient" allowRemoteTrigger="true" />
+    <event name="drivelicense:updateClientLicenses" allowRemoteTrigger="true" />
+    <event name="drivelicense:cancelTest" allowRemoteTrigger="true" />
+    <event name="drivelicense:testCancelledClient" allowRemoteTrigger="true" />
+    <event name="drivelicense:requestShowSelf" allowRemoteTrigger="true" />
+    <event name="drivelicense:displayGUI_Client" allowRemoteTrigger="true" />
+    
+    <event name="openMechanicWindow" allowRemoteTrigger="true" />
+    <event name="onMechanicRequestSpawn" allowRemoteTrigger="true" />
+    <event name="onMechanicLeaveDuty" allowRemoteTrigger="true" />
+    <event name="onMechanicRequestLeaveFaction" allowRemoteTrigger="true" />
+    <event name="mechanic:showRepairConfirmationToPlayer" allowRemoteTrigger="true" />
+    <event name="mechanic:playerRespondedToRepairOffer" allowRemoteTrigger="true" />
+    <event name="mechanic:startRepairAnimationOnVehicle" allowRemoteTrigger="true" />
+    <event name="mechanic:closeRepairConfirmation" allowRemoteTrigger="true" />
+	<event name="mechanic:openTuningMenuClient" allowRemoteTrigger="true" />
+	<event name="mechanic:openRepairMenuClient" allowRemoteTrigger="true" />
+    <event name="mechanic:forceCloseRepairMenu" allowRemoteTrigger="true" />
+    <event name="mechanic:requestVehicleRepairServer" allowRemoteTrigger="true" />
+    <event name="mechanic:requestChangeVehicleColor" allowRemoteTrigger="true" />
+	<event name="mechanic:updateVehicleRGBColorsClient" allowRemoteTrigger="true" />
+    <event name="vehicles:applyRGBColorsToVehicle" allowRemoteTrigger="true" />
+	<event name="cartune:purchaseUpgrade" allowRemoteTrigger="true" />
+    <event name="cartune:forceCloseTuningMenu" allowRemoteTrigger="true" />
+    <event name="cartune:updateLocalTuneData" allowRemoteTrigger="true" />
+	<event name="mechanic:requestHighLevelTune" allowRemoteTrigger="true" />
+	<event name="mechanic:tuneRequestStatus" allowRemoteTrigger="false" />
+	<event name="mechanic:notifyMechanicsOfTuneRequest" allowRemoteTrigger="false" />
+	<event name="mechanic:installationStarted" allowRemoteTrigger="false" />
+	<event name="mechanic:installationFinished" allowRemoteTrigger="false" />
+	<event name="mechanic:beginInstallNotification" allowRemoteTrigger="false" />
+	<event name="mechanic:requestRepairOfferFromClickedVehicle" allowRemoteTrigger="true" />
+    <event name="mechanic:showMechanicRepairConfirmGUI" allowRemoteTrigger="false" />
+	<event name="mechanic:mechanicConfirmsRepairOffer" allowRemoteTrigger="true" />
+    <event name="mechanic:showPlayerAcceptRepairGUI" allowRemoteTrigger="false" />
+	<event name="mechanic:playerRespondedToRepairOfferExternal" allowRemoteTrigger="true" />
+    <event name="mechanic:startRepairProgressBar" allowRemoteTrigger="false" />
+	<event name="mechanic:stopRepairProgressBar" allowRemoteTrigger="false" />
+	<event name="mechanic:closeMechanicConfirmGUI" allowRemoteTrigger="false" />
+    <event name="mechanic:closePlayerAcceptGUI" allowRemoteTrigger="false" />
+	<event name="mechanic:requestSelfRepairVehicle" allowRemoteTrigger="true" />
+    <event name="idcard:requestFromPed" allowRemoteTrigger="true" />
+    <event name="idcard:showPurchaseConfirmation" allowRemoteTrigger="true" />
+    <event name="idcard:confirmPurchase" allowRemoteTrigger="true" />
+    <event name="idcard:requestShowSelf" allowRemoteTrigger="true" />
+    <event name="idcard:displayGUI" allowRemoteTrigger="true" />
+
+    <event name="onClientRequestsPedAction" allowRemoteTrigger="true" />
+    <event name="onServerRequestsJobConfirmation" allowRemoteTrigger="true" />
+    <event name="onPlayerAcceptsJobOffer" allowRemoteTrigger="true" />
+    <event name="onClientRequestsBankPedInfo" allowRemoteTrigger="true" />
+    <event name="onServerSendsBankPedInfo" allowRemoteTrigger="true" />
+
+    <event name="bankrob:requestActionConfirmation" allowRemoteTrigger="true" />
+    <event name="bankrob:confirmAction" allowRemoteTrigger="true" />
+    <event name="bankrob:startPoliceNotification" allowRemoteTrigger="true" />
+    <event name="bankrob:stopPoliceNotification" allowRemoteTrigger="true" />
+    <event name="bankrob:startRobberyTimer" allowRemoteTrigger="true" />
+    <event name="bankrob:stopRobberyTimer" allowRemoteTrigger="true" />
+    <event name="bankrob:updateRobberyInfo" allowRemoteTrigger="true" />
+    <event name="bankrob:cooldownUpdate" allowRemoteTrigger="true" />
+    <event name="bankrob:playAlarmSound" allowRemoteTrigger="true" />
+
+    <event name="casinorob:requestActionConfirmation" allowRemoteTrigger="true" />
+    <event name="casinorob:confirmAction" allowRemoteTrigger="true" />
+    <event name="casinoRob:enterCasino" allowRemoteTrigger="true" />
+    <event name="casinoRob:exitCasino" allowRemoteTrigger="true" />
+    <event name="casinoRob:playExplosionEffect" allowRemoteTrigger="true" />
+    <event name="casinoRob:showNotification" allowRemoteTrigger="true" />
+    <event name="casinorob:startRobberyTimer" allowRemoteTrigger="true" />
+    <event name="casinorob:stopRobberyTimer" allowRemoteTrigger="true" />
+    <event name="casinorob:updateRobberyInfo" allowRemoteTrigger="true" />
+    <event name="casinorob:cooldownUpdate" allowRemoteTrigger="true" />
+    <event name="casinorob:startPoliceNotification" allowRemoteTrigger="true" />
+    <event name="casinorob:stopPoliceNotification" allowRemoteTrigger="true" />
+    <event name="casinoRob:activateSafeClicking" allowRemoteTrigger="true" />
+    <event name="casinoRob:deactivateSafeClicking" allowRemoteTrigger="true" />
+    <event name="casinoRob:safeLootedFeedback" allowRemoteTrigger="true" />
+    <event name="casinoRob:playerClickedSafe" allowRemoteTrigger="true" />
+    <event name="casinoRob:requestEnterCasino" allowRemoteTrigger="true" />
+    <event name="casinoRob:requestExitCasino" allowRemoteTrigger="true" />
+    <event name="casinorob:updateRewardDisplay" allowRemoteTrigger="true" />
+    <event name="casinorob:stopRewardDisplay" allowRemoteTrigger="true" />
+    <event name="casinorob:playAlarmSound" allowRemoteTrigger="true" />
+
+    <event name="requestItemDefinitions" allowRemoteTrigger="true" />
+    <event name="requestInventoryUpdate" allowRemoteTrigger="true" />
+    <event name="useInventoryItem" allowRemoteTrigger="true" />
+    <event name="dropInventoryItem" allowRemoteTrigger="true" />
+    <event name="clientInventoryReady" allowRemoteTrigger="true"/>
+    <event name="onClientReceiveItemDefinitions" allowRemoteTrigger="true"/>
+    <event name="requestMoveItem" allowRemoteTrigger="true" />
+
+    <event name="registerPlayer" allowRemoteTrigger="true"/>
+    <event name="loginPlayer" allowRemoteTrigger="true"/>
+    <event name="onPlayerLoginSuccess" allowRemoteTrigger="true" />
+    <event name="onPlayerLoginComplete" allowRemoteTrigger="true" />
+    <event name="forceShowLogin" allowRemoteTrigger="true" />
+    <event name="switchToLogin" allowRemoteTrigger="true" />
+    <event name="showMessage" allowRemoteTrigger="true" />
+
+    <event name="showUserPanel" allowRemoteTrigger="true" />
+    <event name="despawnPlayerVehicle" allowRemoteTrigger="true" />
+    <event name="updateWantedLevelDisplay" allowRemoteTrigger="true" />
+    <event name="onWantedReleaseOpen" allowRemoteTrigger="true" />
+    <event name="onWantedReleaseClose" allowRemoteTrigger="true" />
+    <event name="wantedReleasePay" allowRemoteTrigger="true" />
+
+    <event name="showDeathScreenClient" allowRemoteTrigger="true" />
+    <event name="onSpawnRequestCity" allowRemoteTrigger="true" />
+    <event name="onSpawnRequestHome" allowRemoteTrigger="true" />
+    <event name="onSpawnRequestFactionBase" allowRemoteTrigger="true" />
+    <event name="requestAutomaticJailSpawn" allowRemoteTrigger="true" />
+
+    <event name="onPlayerFactionChange" allowRemoteTrigger="false" />
+    <event name="onPlayerRankChange" allowRemoteTrigger="false" />
+    <event name="onWantedChange" allowRemoteTrigger="false" />
+
+    <event name="managementShowPanel" allowRemoteTrigger="true" />
+    <event name="onManagementInvitePlayer" allowRemoteTrigger="true" />
+    <event name="onManagementSetRank" allowRemoteTrigger="true" />
+    <event name="onManagementKickPlayer" allowRemoteTrigger="true" />
+
+    <event name="openPoliceManagement" allowRemoteTrigger="true" />
+    <event name="spawnPoliceOfficer" allowRemoteTrigger="true" />
+    <event name="requestWantedPlayers" allowRemoteTrigger="true" />
+    <event name="receiveWantedPlayers" allowRemoteTrigger="true" />
+    <event name="requestPlayerLocation" allowRemoteTrigger="true" />
+    <event name="showTargetBlip" allowRemoteTrigger="true" />
+    <event name="onPoliceRequestOffDuty" allowRemoteTrigger="true" />
+
+    <event name="openYakuzaWindow" allowRemoteTrigger="true"/>
+    <event name="onYakuzaRequestSpawn" allowRemoteTrigger="true"/>
+    <event name="onYakuzaRequestLeave" allowRemoteTrigger="true"/>
+
+    <event name="openMocroWindow" allowRemoteTrigger="true"/>
+    <event name="onMocroRequestSpawn" allowRemoteTrigger="true"/>
+    <event name="onMocroRequestLeave" allowRemoteTrigger="true"/>
+
+    <event name="openCosaWindow" allowRemoteTrigger="true"/>
+    <event name="onCosaRequestSpawn" allowRemoteTrigger="true"/>
+    <event name="onCosaRequestLeave" allowRemoteTrigger="true"/>
+
+    <event name="jail_updateCountdown1" allowRemoteTrigger="true"/>
+    <event name="jail_updateCountdown2" allowRemoteTrigger="true"/>
+    <event name="jail_showExitLobby" allowRemoteTrigger="true"/>
+    <event name="jail_showDoorBreakUI" allowRemoteTrigger="true"/>
+    <event name="jail_showHackSystemUI" allowRemoteTrigger="true"/>
+    <event name="jail_onDoorBreakYes" allowRemoteTrigger="true"/>
+    <event name="jail_onHackSystemSuccess" allowRemoteTrigger="true"/>
+
+    <event name="onClothesShopMarkerHit" allowRemoteTrigger="true" />
+    <event name="onPlayerBuyOutfit" allowRemoteTrigger="true" />
+    <event name="onOutfitPurchaseSuccess" allowRemoteTrigger="true" />
+
+    <event name="purchaseFuel" allowRemoteTrigger="true" />
+    <event name="updateVehicleFuel" allowRemoteTrigger="true" />
+    <event name="onRequestVehiclesForSale" allowRemoteTrigger="true" />
+    <event name="onReceiveVehiclesForSale" allowRemoteTrigger="true" />
+    <event name="onPlayerBuyVehicle" allowRemoteTrigger="true" />
+    <event name="onVehiclePurchaseSuccess" allowRemoteTrigger="true" />
+    <event name="onPlayerRequestVehicleSpawn" allowRemoteTrigger="true" />
+    <event name="onReceivePlayerVehicles" allowRemoteTrigger="true" />
+    <event name="onPlayerSpawnVehicle" allowRemoteTrigger="true" />
+    <event name="onPlayerRepairVehicle" allowRemoteTrigger="true" />
+    <event name="refreshVehicleSpawnMenu" allowRemoteTrigger="true" />
+
+    <event name="juwelier:requestSellGUIData" allowRemoteTrigger="true" />
+    <event name="juwelier:openSellGUI" allowRemoteTrigger="true" />
+    <event name="juwelier:sellItem" allowRemoteTrigger="true" />
+    <event name="juwelier:refreshSellGUIData" allowRemoteTrigger="true" />
+
+    <event name="createHouseBlipClient" allowRemoteTrigger="true"/>
+    <event name="showHouseInfoGUI" allowRemoteTrigger="true"/>
+    <event name="closeHouseGUI" allowRemoteTrigger="true"/>
+    <event name="requestHouseInfo" allowRemoteTrigger="true"/>
+    <event name="tryBuyHouse" allowRemoteTrigger="true"/>
+    <event name="requestExistingHouses" allowRemoteTrigger="true"/>
+    <event name="requestEnterHouse" allowRemoteTrigger="true"/>
+    <event name="updateHouseVisualStateClient" allowRemoteTrigger="true"/>
+    <event name="showSellConfirmationClient" allowRemoteTrigger="true"/>
+    <event name="confirmSellHouse" allowRemoteTrigger="true"/>
+
+    <file src="handy/images/userpanel.png" />
+    <file src="handy/images/message.png" />
+    <file src="user/client/images/items/*.png" />
+    <file src="user/client/images/usericons/*.png" />
+    <file src="taroxscoreboard/flags/*.png" />
+    <file src="bankrob/files/sounds/alarm.mp3" />
+    <file src="casinorob/files/sounds/alarm.mp3" />
+    <file src="user/client/images/skin_previews/*.png" />
+    <file src="drivelicense/images/theory/*.png" />
+	
+	<file src="fraktionen/mechanic/images/tuning.png" />
+    <file src="fraktionen/mechanic/images/paynspray.png" />
+	<file src="user/client/images/items/cannabis_seed.png" />
+    <file src="user/client/images/items/raw_cannabis.png" />
+    <file src="user/client/images/items/koka_seedling.png" />
+    <file src="user/client/images/items/raw_koka.png" />
+	
+	<export function="loadPlayerInventory" type="server" />
+    <export function="givePlayerItem" type="server" />
+    <export function="takePlayerItem" type="server" />
+    <export function="takePlayerItemByID" type="server" />
+    <export function="hasPlayerItem" type="server" />
+    <export function="getPlayerItemQuantity" type="server" />
+    <export function="getItemDefinition" type="server" />
+
+    <export function="getPlayerFractionAndRank" type="server" />
+    <export function="setPlayerFractionRank" type="server" />
+    <export function="invitePlayerToFraction" type="server" />
+    <export function="kickPlayerFromFraction" type="server" />
+    <export function="refreshPlayerFractionData" type="server" />
+    <export function="getFractionNameFromID" type="server" />
+    <export function="canPlayerUseFactionSpawnCommand" type="server" />
+
+    <export function="arrestPlayer" type="server" />
+    <export function="freePlayerFromJail" type="server" />
+    <export function="setPlayerWantedLevel" type="server" />
+
+    <export function="getManagedPedConfigByName" type="server" />
+    <export function="getAllManagedPedConfigs" type="server" />
+    <export function="getBankPedOriginalDefinition" type="server" />
+    <export function="getServicePedDefinition" type="server" />
+    <export function="getRyderCharacterDefinition" type="server" />
+    <export function="createSingleManagedPed" type="server" />
+    <export function="getManagedPedConfigByIdentifier" type="server" />
+    <export function="givePoliceDutyWeapons" type="server" />
+    <export function="savePoliceDutyWeaponsToSQL" type="server" />
+    <export function="loadPlayerWeaponsFromSQL" type="server" />
+    
+    <export function="hasPlayerLicense" type="server" />
+    <export function="givePlayerLicense" type="server" /> 
+    <export function="removePlayerLicense" type="server" /> 
+    <export function="getPlayerLicenses" type="server" /> 
+    
+    <export function="giveMechanicDutyTools" type="server" />
+    <export function="saveMechanicDutyToolsToSQL" type="server" />
+    <export function="addToFactionTreasury" type="server" />
+    <export function="clearPlayerPoliceWeaponsAndDutyWhenKickedOrFactionChanged" type="server" />
+    <export function="clearPlayerMechanicToolsAndDutyWhenKickedOrFactionChanged" type="server" />
+</meta>

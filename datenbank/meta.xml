@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<meta>
+    <info author="Tarox" type="script" name="Datenbank-System" description="Globale Datenbankverbindung für Tarox-Gamemode" />
+
+    <settings>
+        <setting name="*db_host" value="de-lim-01.vexyhost.com" />
+        <setting name="*db_name" value="s7354_datenbank" />
+        <setting name="*db_user" value="u7354_tVwVjpq2Q4" />
+        <setting name="*db_pass" value="l.n@GxKL4uu7XFmtPMTdCD=d" />
+        <setting name="*db_port" value="3306" />
+    </settings>
+    <export function="getConnection" type="server"/>
+    <export function="queryDatabase" type="server"/>
+    <export function="executeDatabase" type="server"/>
+    <script src="datenbank.lua" type="server" />
+</meta>

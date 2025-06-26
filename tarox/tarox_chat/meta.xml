@@ -1,0 +1,9 @@
+<meta>
+    <info author="kenoZ" type="script" name="Tarox Chat System" description="Modifiziertes lokales und globales Chat-System"/>
+    <min_mta_version server="1.6.0" client="1.6.0" />
+
+    <script src="chat_server.lua" type="server" />
+    <script src="chat_client.lua" type="client" cache="false"/>
+
+    <export function="sendGlobalChatMessage" type="server" /> 
+    </meta>

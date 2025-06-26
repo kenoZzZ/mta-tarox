@@ -1,0 +1,21 @@
+<meta>
+    <info author="Dein Name" type="script" name="Standalone House System" description="Isoliertes Haussystem zum Testen"/>
+    <min_mta_version client="1.5.8-9.20997" server="1.5.8-9.20997"/>
+
+    <include resource="datenbank" />
+
+    <script src="house_server.lua" type="server" />
+    <script src="house_client.lua" type="client" />
+
+    <event name="createHouseBlipClient" />
+    <event name="showHouseInfoGUI" />
+    <event name="closeHouseGUI" />
+    <event name="requestHouseInfo" />
+    <event name="tryBuyHouse" />
+    <event name="requestExistingHouses" />
+    <event name="requestEnterHouse" />
+    <event name="updateHouseVisualStateClient" />
+    <event name="showSellConfirmationClient" />
+    <event name="confirmSellHouse" />
+
+</meta>
